@@ -27,7 +27,7 @@ export function HomeCard(props: HomeCardProps) {
         <button 
         type="button"
         onClick={getRoute(props.route)}>
-          <a href={`/functions`}>Clique para ver mais →</a>
+          <a href={`/dashboard`}>Clique para ver mais →</a>
         </button>
       </div>
     </div>
