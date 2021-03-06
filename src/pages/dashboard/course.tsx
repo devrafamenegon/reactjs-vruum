@@ -1,18 +1,19 @@
 import Head from 'next/head'
 import React from 'react'
-import { DashNavbar } from '../components/DashNavbar';
+import { DashNavbar } from '../../components/DashNavbar';
 
 import styles from '../styles/pages/Dashboard.module.css'
 
-export default function Dashboard() {
+export default function Course() {
   return (
-    <div className={styles.container}>
+    <div>
 
       <Head>
-        <title>Dashboard</title>
+        <title>Dashboard/Course</title>
       </Head>
 
       <DashNavbar />
+
     </div>
   );
 }

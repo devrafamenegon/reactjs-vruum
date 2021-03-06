@@ -19,21 +19,21 @@ export default function Home() {
           img="cooper" 
           title="Consumo" 
           description="Calcular a média de consumo do seu carro." 
-          route="consumo"
+          route="consumption"
           color="styles.cardRed"
         />
         <HomeCard 
           img="fuel" 
           title="Combustíveis" 
           description="Comparar o preço do Álcool e da Gasolina para saber qual o mais vantajoso para abastecer." 
-          route="combustiveis"
+          route="fuel"
           color="styles.cardGreen"
         />
         <HomeCard 
           img="road" 
           title="Percurso" 
           description="Calcular qual será o gasto total em uma viagem." 
-          route="custo"
+          route="course"
           color="styles.cardBlue"
         />
       </main>

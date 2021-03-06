@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '../styles/components/HomeCard.module.css'
 
 interface HomeCardProps {
@@ -10,11 +11,6 @@ interface HomeCardProps {
 
 export function HomeCard(props: HomeCardProps) {
   
-  function getRoute(route) {
-    const changedRoute = route;
-    return changedRoute
-  }
-
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardCover}>
@@ -24,11 +20,12 @@ export function HomeCard(props: HomeCardProps) {
 
       <div className={styles.cardBody}>
         <span>{props.description}</span>
-        <button 
-        type="button"
-        onClick={getRoute(props.route)}>
-          <a href={`/dashboard`}>Clique para ver mais →</a>
-        </button>
+        
+        <Link href={`/dashboard/${props.route}`}>
+          <button type="button">
+            <a>Clique para ver mais →</a>
+          </button>
+        </Link>
       </div>
     </div>
   );

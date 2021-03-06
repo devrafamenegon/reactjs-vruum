@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '../styles/components/DashNavbar.module.css'
 
 export function DashNavbar() {
@@ -14,16 +15,24 @@ export function DashNavbar() {
       {/* nav-buttons */}
       <ul className={styles.navbarLinks}>
         <li>
-          <a href="/">HOME</a>
+          <Link href="/">
+            <a>HOME</a>
+          </Link>
         </li>
         <li>
-          <a href="/consumption">CONSUMO</a>
+          <Link href="/dashboard/consumption">
+            <a>CONSUMO</a>
+          </Link>
         </li>
         <li>
-          <a href="/fuel">COMBUSTÍVEL</a>
+          <Link href="/dashboard/fuel">
+            <a>COMBUSTÍVEL</a>
+          </Link>
         </li>
         <li>
-          <a href="/course">PERCURSO</a>
+          <Link href="/dashboard/course">
+            <a>PERCURSO</a>
+          </Link>
         </li>
       </ul>
 
