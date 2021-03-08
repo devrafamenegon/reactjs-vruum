@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import { DashCard } from '../../components/DashCard';
+import { CardConsumption } from '../../components/CardConsumption';
 import { DashNavbar } from '../../components/DashNavbar';
 
 import styles from '../../styles/pages/Consumption.module.css'
@@ -14,7 +14,7 @@ export default function Consumption() {
       </Head>
 
       <DashNavbar />
-      <DashCard />
+      <CardConsumption />
 
     </div>
   );

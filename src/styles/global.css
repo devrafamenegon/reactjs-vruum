@@ -39,7 +39,7 @@ body,
 input,
 textarea,
 button {
-  font: 400 16px "Inter", sans-serif;
+  font: 400 16px "Electrolize", sans-serif;
 }
 
 button {
@@ -49,6 +49,11 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h5,
+span {
+  font: 400 16px "Inter", sans-serif;
 }
 
 .container {
