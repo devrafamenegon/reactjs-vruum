@@ -27,8 +27,8 @@ export function CardConsumption() {
 
         <div className={styles.dashCardForm}>
           <h2>MEDIA DE CONSUMO</h2>
+          
           <form>
-
             <h5>Quantidades de litros:</h5>
             <input type="text" id="litros" onChange={(event) => setLitros(event.target.value)} />
 
@@ -37,10 +37,10 @@ export function CardConsumption() {
 
             <div className={styles.dashCardFormButtons}>
               <button id="btn-submit" type="button" onClick={consumptionResult}>Calcular</button>
-              <button id="btn-reset" type="button" onClick={formClear}>Limpar</button>
+              <button id="btn-reset" type="reset" onClick={formClear}>Limpar</button>
             </div>
-
           </form>
+
         </div>
 
       </div>

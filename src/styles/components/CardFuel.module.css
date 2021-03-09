@@ -71,7 +71,7 @@
   flex: 60%;
 
   color: var(--white);
-  background: var(--red);
+  background: var(--green);
 }
 
 .dashCardFormButtons > :first-child:hover {

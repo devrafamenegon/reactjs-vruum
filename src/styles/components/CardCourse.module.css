@@ -30,7 +30,7 @@
 }
 
 .dashCardImage img {
-  height: 250px;
+  height: 310px;
 }
 
 .dashCardForm {
@@ -71,7 +71,7 @@
   flex: 60%;
 
   color: var(--white);
-  background: var(--red);
+  background: var(--blue);
 }
 
 .dashCardFormButtons > :first-child:hover {

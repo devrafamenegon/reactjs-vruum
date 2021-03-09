@@ -1,28 +1,56 @@
 .navbarContainer {
-  width: 100vw;
+  width: 100%;
   height: 80px;
 
-  background: var(--red);
+  background: var(--light-gray);
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+.navbarContent {
+  max-width: 65vw;
+  width: 100%;
+
+  justify-content: space-between;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.navbarLogo {
+  width: 100%;
+  flex: 60%;
 }
 
 .navbarLogo img {
-  width: 110px;
-  margin: 15px;
+  width: 150px;
 }
 
 .navbarLinks {
+  width: 100%;
+  flex: 40%;
+
+  align-items: center;
+
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+}
+
+.navbarLinks ul {
+  width: 100%;
 }
 
 .navbarLinks li {
-  margin: 0 2vw;
+  margin: 0 15px;
+
   list-style: none;
   transition: 0.5s;
 }
@@ -38,4 +66,52 @@
   letter-spacing: 3px;
   font-weight: 500;
   font-size: 1.2rem;
+}
+
+.navbarBurger {
+  display: none;
+  cursor: pointer;
+}
+
+.navbarBurger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1160px) {
+  .navbarContent {
+    max-width: 80vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbarContent {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbarLinks {
+    display: none;
+  }
+
+  .navbarBurger {
+    display: block;
+    margin-right: 60px;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
 }

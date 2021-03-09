@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import { CardFuel } from '../../components/CardFuel';
 import { DashNavbar } from '../../components/DashNavbar';
 
 export default function Fuel() {
@@ -11,6 +12,7 @@ export default function Fuel() {
       </Head>
 
       <DashNavbar />
+      <CardFuel />
 
     </div>
   );

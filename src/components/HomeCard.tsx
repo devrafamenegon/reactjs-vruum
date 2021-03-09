@@ -10,7 +10,7 @@ interface HomeCardProps {
 }
 
 export function HomeCard(props: HomeCardProps) {
-  
+
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardCover}>
