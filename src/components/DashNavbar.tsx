@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import styles from '../styles/components/DashNavbar.module.css'
 
-export function DashNavbar() {
+interface DashNavbarProps {
+  color: string;
+}
+
+export function DashNavbar(props: DashNavbarProps) {
   return (
-    <div className={styles.navbarContainer}>
+    <div className={styles.navbarContainer} style= {{backgroundColor: props.color}}>
       <div className={styles.navbarContent}>
         {/* nav-logo */}
         <div className={styles.navbarLogo}>

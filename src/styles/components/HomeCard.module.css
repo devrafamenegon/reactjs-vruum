@@ -6,7 +6,6 @@
 
 .cardCover {
   height: 230px;
-  background: var(--background);
 
   position: relative;
   display: flex;
@@ -36,7 +35,6 @@
 
 .cardContainer:hover .cardCover {
   transform: translateY(0);
-  background: var(--light-gray);
 }
 
 .cardContainer:hover .cardCover img {

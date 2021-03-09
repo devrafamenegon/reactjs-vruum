@@ -11,7 +11,7 @@ export default function Consumption() {
         <title>Dashboard/Consumption</title>
       </Head>
 
-      <DashNavbar />
+      <DashNavbar color="var(--red)"/>
       <CardConsumption />
 
     </div>

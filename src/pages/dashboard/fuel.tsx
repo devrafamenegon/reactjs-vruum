@@ -11,7 +11,7 @@ export default function Fuel() {
         <title>Dashboard/Fuel</title>
       </Head>
 
-      <DashNavbar />
+      <DashNavbar color="var(--green)"/>
       <CardFuel />
 
     </div>

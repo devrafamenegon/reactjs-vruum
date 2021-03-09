@@ -20,21 +20,21 @@ export default function Home() {
           title="Consumo" 
           description="Calcular a média de consumo do seu carro." 
           route="consumption"
-          color="styles.cardRed"
+          color="var(--red)"
         />
         <HomeCard 
           img="fuel" 
           title="Combustíveis" 
           description="Comparar o preço do Álcool e da Gasolina para saber qual o mais vantajoso para abastecer." 
           route="fuel"
-          color="styles.cardGreen"
+          color="var(--green)"
         />
         <HomeCard 
           img="road" 
           title="Percurso" 
           description="Calcular qual será o gasto total em uma viagem." 
           route="course"
-          color="styles.cardBlue"
+          color="var(--blue)"
         />
       </main>
     </div>

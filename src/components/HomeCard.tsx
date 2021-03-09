@@ -13,8 +13,8 @@ export function HomeCard(props: HomeCardProps) {
 
   return (
     <div className={styles.cardContainer}>
-      <div className={styles.cardCover}>
-        <img src={`/home/${props.img}.svg`} />
+      <div className={styles.cardCover} style={{backgroundColor: props.color}}>
+        <img src={`/home/${props.img}.svg`}/>
         <h3>{props.title}</h3>
       </div>
 
