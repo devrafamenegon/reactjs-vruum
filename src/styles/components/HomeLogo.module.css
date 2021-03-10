@@ -1,7 +1,14 @@
 .homeLogoContainer {
-  max-width: 45rem;
+  max-width: 820px;
 
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 50px;
+}
+
+.homeLogoContainer img {
+  width: 100%;
+}
+
+@media (max-width: 320px) {
 }

@@ -102,3 +102,17 @@
     max-width: 750px;
   }
 }
+
+@media (max-width: 768px) {
+  .cardCover {
+    transform: translateY(0px);
+  }
+
+  .cardBody {
+    transform: translateY(0px);
+  }
+
+  .cardBody span {
+    font-size: 1.5rem;
+  }
+}

@@ -12,7 +12,7 @@ export default function Dashboard() {
         <title>Dashboard</title>
       </Head>
 
-      <DashNavbar />
+      <DashNavbar color="light-gray"/>
     </div>
   );
 }

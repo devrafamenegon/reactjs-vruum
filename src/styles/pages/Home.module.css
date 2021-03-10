@@ -1,7 +1,7 @@
 .container {
   height: 100vh;
   margin: 0 auto;
-  padding: 2.5rem 2rem;
+  padding: 38px 32px;
 
   display: flex;
   flex-direction: column;
@@ -10,21 +10,21 @@
 .container main {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-template-rows: minmax(auto-fit, minmax(100%, 100%));
   grid-gap: 80px;
 }
 
 @media (max-width: 1280px) {
   .container main {
-    grid-template-columns: repeat(2, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-template-rows: minmax(2, minmax(100%, 100%));
   }
 }
 
 @media (max-width: 860px) {
   .container main {
-    grid-template-columns: repeat(1, minmax(350px, 1fr));
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
     grid-template-rows: minmax(3, minmax(100%, 100%));
   }
 }
