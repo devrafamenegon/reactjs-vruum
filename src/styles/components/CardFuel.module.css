@@ -24,13 +24,13 @@
 .dashCardImage {
   flex: 50%;
 
-  padding: 40px;
+  padding: 2vw;
 
   text-align: center;
 }
 
 .dashCardImage img {
-  height: 250px;
+  max-height: 250px;
 }
 
 .dashCardForm {
@@ -90,7 +90,7 @@
 }
 
 .dashCardBottom {
-  height: 50px;
+  height: 60px;
   width: 90%;
 
   margin: 0 auto;
@@ -104,4 +104,34 @@
 
 .dashCardBottom span {
   font-size: 1.5rem;
+}
+
+@media (max-width: 1430px) {
+  .dashCardTop {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 980px) {
+  .dashCardContainer {
+    max-width: 80vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .dashCardContainer {
+    max-width: 90vw;
+
+    padding: 10px;
+  }
+
+  .dashCardBottom span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .dashCardForm input {
+    margin-bottom: 20px;
+  }
 }
