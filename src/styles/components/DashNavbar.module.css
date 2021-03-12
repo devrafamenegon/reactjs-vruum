@@ -94,10 +94,6 @@
 }
 
 @media (max-width: 800px) {
-  .navbarLinks {
-    display: none;
-  }
-
   .navbarBurger {
     display: block;
     margin-right: 60px;
