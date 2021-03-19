@@ -42,4 +42,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) fi
 
 ---
 
-<p>Projected by Rafael Menegon</p>
+Projected by Rafael Menegon
