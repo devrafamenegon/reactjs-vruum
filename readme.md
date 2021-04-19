@@ -19,7 +19,7 @@ This project was developed using the following technologies:
 Clone the project and access the folder
 
 ```bash
-$ git clone https://github.com/C0bal/vruum-react && cd vruum-react
+$ git clone https://github.com/C0bal/reactjs-vruum && cd reactjs-vruum
 ```
 
 Use the [yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable) to install dependences, follow the steps below.
