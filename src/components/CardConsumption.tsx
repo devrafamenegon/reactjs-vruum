@@ -1,5 +1,5 @@
-import styles from '../styles/components/CardConsumption.module.css'
 import { useState } from 'react'
+import { DashCardContainer, DashCardTop, DashCardImage, DashCardForm, DashCardFormButtons, DashCardBottom } from '../styles/components/Card';
 
 export function CardConsumption() {
 
@@ -18,16 +18,16 @@ export function CardConsumption() {
   }
 
   return (
-    <div className={styles.dashCardContainer}>
-      <div className={styles.dashCardTop}>
+    <DashCardContainer>
+      <DashCardTop>
 
-        <div className={styles.dashCardImage}>
+        <DashCardImage>
           <img src="/dashboard/bmw.svg" />
-        </div>
+        </DashCardImage>
 
-        <div className={styles.dashCardForm}>
+        <DashCardForm>
           <h2>MEDIA DE CONSUMO</h2>
-          
+
           <form>
             <h5>Quantidades de litros:</h5>
             <input type="text" id="litros" onChange={(event) => setLitros(event.target.value)} />
@@ -35,18 +35,18 @@ export function CardConsumption() {
             <h5>Quilômetros percorridos:</h5>
             <input type="text" onChange={(event) => setKmPerc(event.target.value)} />
 
-            <div className={styles.dashCardFormButtons}>
+            <DashCardFormButtons buttonColor="var(--red)">
               <button id="btn-submit" type="button" onClick={consumptionResult}>Calcular</button>
               <button id="btn-reset" type="reset" onClick={formClear}>Limpar</button>
-            </div>
+            </DashCardFormButtons>
           </form>
 
-        </div>
+        </DashCardForm>
 
-      </div>
-      <div className={styles.dashCardBottom}>
+      </DashCardTop>
+      <DashCardBottom>
         <span>Seu veículo tem uma autonomia de: {result} Km/L</span>
-      </div>
-    </div>
+      </DashCardBottom>
+    </DashCardContainer>
   );
 }

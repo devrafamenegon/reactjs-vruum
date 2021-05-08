@@ -1,5 +1,5 @@
-import styles from '../styles/components/CardCourse.module.css'
 import { useState } from 'react'
+import { DashCardContainer, DashCardTop, DashCardImage, DashCardForm, DashCardFormButtons, DashCardBottom } from '../styles/components/Card';
 
 export function CardCourse() {
 
@@ -22,14 +22,14 @@ export function CardCourse() {
   }
 
   return (
-    <div className={styles.dashCardContainer}>
-      <div className={styles.dashCardTop}>
+    <DashCardContainer>
+      <DashCardTop>
 
-        <div className={styles.dashCardImage}>
+        <DashCardImage>
           <img src="/dashboard/road.svg" />
-        </div>
+        </DashCardImage>
 
-        <div className={styles.dashCardForm}>
+        <DashCardForm>
           <h2>ETANOL OU GASOLINA?</h2>
           
           <form>
@@ -42,18 +42,18 @@ export function CardCourse() {
             <h5>Autonomia do veículo:</h5>
             <input type="text" onChange={(event) => setAutonomia(event.target.value)} />
 
-            <div className={styles.dashCardFormButtons}>
+            <DashCardFormButtons buttonColor="var(--blue)">
               <button id="btn-submit" type="button" onClick={courseResult}>Calcular</button>
               <button id="btn-reset" type="reset" onClick={formClear}>Limpar</button>
-            </div>
+            </DashCardFormButtons>
           </form>
 
-        </div>
+        </DashCardForm>
 
-      </div>
-      <div className={styles.dashCardBottom}>
+      </DashCardTop>
+      <DashCardBottom>
         <span>O gasto será de: R${result}</span>
-      </div>
-    </div>
+      </DashCardBottom>
+    </DashCardContainer>
   );
 }

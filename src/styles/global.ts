@@ -36,6 +36,15 @@ export default createGlobalStyle`
   body {
     background: var(--background);
     color: var(--text);
+
+    ::-webkit-scrollbar{
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background: linear-gradient(var(--background), var(--white));
+      border-radius: 6px;
+    }
   }
 
   body,

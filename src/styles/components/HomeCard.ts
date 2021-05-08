@@ -29,12 +29,29 @@ const CardContainer = styled.div<CardCoverProps>`
   @media (max-width: 860px) {
     max-width: 750px;
   }
+
+  @media (max-width: 768px) {
+    .cover {
+      transform: translateY(0);
+      background: ${(props: CardCoverProps) => props.cardBackground};
+
+      img {
+        opacity: 1;
+      }
+
+      h3 {
+        opacity: 1;
+      }
+    }
+  }
 `;
 
 const CardCover = styled.div.attrs({ className: 'cover' })`
   height: 230px;
   background: var(--background);
+
   position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,6 +65,7 @@ const CardCover = styled.div.attrs({ className: 'cover' })`
   img {
     width: 60%;
     height: 150px;
+
     opacity: 0.2;
     transition: 0.5s;
   }
@@ -55,12 +73,9 @@ const CardCover = styled.div.attrs({ className: 'cover' })`
   h3 {
     color: var(--title);
     font-size: 1.5rem;
+
     opacity: 0.2;
     transition: 0.5s;
-  }
-
-  @media (max-width: 768px) {
-    transform: translateY(0px);
   }
 `;
 

@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Vruum" title="Vruum" src=".github/Vruum.png" />
+  <img alt="vruum" title="vruum" src=".github/Vruum.png" />
 </h1>
 
 ## 🧪 Technologies
