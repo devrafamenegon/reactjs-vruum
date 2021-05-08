@@ -3,12 +3,13 @@ import { HomeCard } from '../components/HomeCard';
 import { HomeLogo } from '../components/HomeLogo';
 
 import styles from '../styles/pages/Home.module.css';
+import { HomeContainer } from '../styles/pages/index';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <HomeContainer>
       <Head>
-        <title>Homepage</title>
+        <title>Homepage | Vruum</title>
       </Head>
 
       <header>
@@ -37,7 +38,6 @@ export default function Home() {
           color="var(--blue)"
         />
       </main>
-    </div>
-    
+    </HomeContainer>
   );
 }

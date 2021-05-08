@@ -1,7 +1,35 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components'
+
 
 // Colocamos as fontes e os demais arquivos no _document pois o usuário só carrega isto 1 vez ao acessar nosso site, ja o _app ele vai ser sempre usado, só que recalculado, o que geraria 1 processo a mais
 export default class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        })
+
+      const initialProps = await Document.getInitialProps(ctx)
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      }
+    } finally {
+      sheet.seal()
+    }
+  }
+  
   render() {
     return (
       <Html>

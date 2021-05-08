@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '../styles/components/HomeCard.module.css'
+import { CardCover, CardBody, CardContainer } from '../styles/components/HomeCard';
 
 interface HomeCardProps {
   img: string;
@@ -12,13 +12,13 @@ interface HomeCardProps {
 export function HomeCard(props: HomeCardProps) {
 
   return (
-    <div className={styles.cardContainer}>
-      <div className={styles.cardCover} style={{backgroundColor: props.color}}>
+    <CardContainer cardBackground={props.color}>
+      <CardCover>
         <img src={`/home/${props.img}.svg`}/>
         <h3>{props.title}</h3>
-      </div>
+      </CardCover>
 
-      <div className={styles.cardBody}>
+      <CardBody>
         <span>{props.description}</span>
         
         <Link href={`/dashboard/${props.route}`}>
@@ -26,7 +26,7 @@ export function HomeCard(props: HomeCardProps) {
             <a>Clique para ver mais →</a>
           </button>
         </Link>
-      </div>
-    </div>
+      </CardBody>
+    </CardContainer>
   );
 }

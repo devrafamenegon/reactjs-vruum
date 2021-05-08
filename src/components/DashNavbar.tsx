@@ -1,23 +1,30 @@
 import Link from 'next/link';
-import styles from '../styles/components/DashNavbar.module.css'
+import { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarBurguer, Line1, Line2, Line3 } from '../styles/components/DashNavbar';
+import React, { useState } from 'react';
 
 interface DashNavbarProps {
   color: string;
 }
 
 export function DashNavbar(props: DashNavbarProps) {
+  const [burguerToggle, setBurgerToggle] = useState(false);
+
+  function burguer() {
+    
+  }
+
   return (
-    <div className={styles.navbarContainer} style= {{backgroundColor: props.color}}>
-      <div className={styles.navbarContent}>
+    <NavbarContainer backgroundColor={props.color}>
+      <NavbarContent>
         {/* nav-logo */}
-        <div className={styles.navbarLogo}>
+        <NavbarLogo>
           <a href="/">
             <img src="/logo.svg" alt="Logo"/>
           </a>
-        </div>
+        </NavbarLogo>
 
         {/* nav-buttons */}
-        <ul className={styles.navbarLinks}>
+        <NavbarLinks>
           <li>
             <Link href="/">
               <a>HOME</a>
@@ -38,16 +45,16 @@ export function DashNavbar(props: DashNavbarProps) {
               <a>PERCURSO</a>
             </Link>
           </li>
-        </ul>
+        </NavbarLinks>
         
         {/* burguer */}
-        <div className={styles.navbarBurguer}>
-          <div className={styles.line1}></div>
-          <div className={styles.line2}></div>
-          <div className={styles.line3}></div>
-        </div>
+        <NavbarBurguer>
+          <Line1 />
+          <Line2 />
+          <Line3 />
+        </NavbarBurguer>
 
-      </div>
-    </div>
+      </NavbarContent>
+    </NavbarContainer>
   );
 }

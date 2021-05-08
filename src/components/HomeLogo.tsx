@@ -1,9 +1,9 @@
-import styles from '../styles/components/HomeLogo.module.css'
+import { HomeLogoContainer } from '../styles/components/HomeLogo';
 
 export function HomeLogo() {
   return (
-    <div className={styles.homeLogoContainer}>
+    <HomeLogoContainer>
       <img src="/logo-full.svg" alt="HomeLogo"/>
-    </div>
+    </HomeLogoContainer>
   );
 }
