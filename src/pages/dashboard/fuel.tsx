@@ -8,7 +8,7 @@ export default function Fuel() {
     <div>
 
       <Head>
-        <title>Dashboard/Fuel</title>
+        <title>Fuel | Vruum</title>
       </Head>
 
       <DashNavbar color="var(--green)"/>

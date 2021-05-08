@@ -8,7 +8,7 @@ export default function Consumption() {
     <div>
 
       <Head>
-        <title>Dashboard/Consumption</title>
+        <title>Consumption | Vruum</title>
       </Head>
 
       <DashNavbar color="var(--red)"/>

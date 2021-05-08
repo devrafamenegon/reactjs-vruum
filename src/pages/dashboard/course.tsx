@@ -8,7 +8,7 @@ export default function Course() {
     <div>
 
       <Head>
-        <title>Dashboard/Course</title>
+        <title>Course | Vruum</title>
       </Head>
 
       <DashNavbar color="var(--blue)"/>
