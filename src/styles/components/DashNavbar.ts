@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FaBars } from 'react-icons/fa';
 
 interface NavbarContainerProps {
   backgroundColor: string;
@@ -85,40 +86,19 @@ const NavbarLinks = styled.ul`
   }
 `;
 
-const NavbarBurguer = styled.div`
+const NavbarMobileButton = styled.button`
+  background: none;
+  border: none;
   display: none;
-  cursor: pointer;
-  align-items: center;
-
-  div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--white);
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-
+  margin-right: 30px;
+  
   @media (max-width: 800px) {
     display: block;
-    align-self: center;
-    margin-right: 60px;
-
-    .toggle .line1 {
-      transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .toggle .line2 {
-      opacity: 0;
-    }
-
-    .toggle .line3 {
-      transform: rotate(45deg) translate(-5px, -6px);
-    }
   }
 `;
 
-const Line1 = styled.div``;
-const Line2 = styled.div``;
-const Line3 = styled.div``;
+const Burguer = styled(FaBars)`
+  color: var(--white);
+`;
 
-export { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarBurguer, Line1, Line2, Line3 }
+export { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarMobileButton, Burguer }

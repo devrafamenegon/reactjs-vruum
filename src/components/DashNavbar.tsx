@@ -1,6 +1,9 @@
-import Link from 'next/link';
-import { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarBurguer, Line1, Line2, Line3 } from '../styles/components/DashNavbar';
 import React, { useState } from 'react';
+import Link from 'next/link';
+
+import { NavbarMobile } from './NavbarMobile';
+
+import { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarMobileButton, Burguer } from '../styles/components/DashNavbar';
 
 interface DashNavbarProps {
   color: string;
@@ -10,7 +13,7 @@ export function DashNavbar(props: DashNavbarProps) {
   const [burguerToggle, setBurgerToggle] = useState(false);
 
   function burguer() {
-    
+    setBurgerToggle(!burguerToggle);
   }
 
   return (
@@ -47,13 +50,12 @@ export function DashNavbar(props: DashNavbarProps) {
           </li>
         </NavbarLinks>
         
-        {/* burguer */}
-        <NavbarBurguer>
-          <Line1 />
-          <Line2 />
-          <Line3 />
-        </NavbarBurguer>
-
+        <NavbarMobileButton>
+          <Burguer size="25px" onClick={burguer}/>
+        </NavbarMobileButton>
+        
+        <NavbarMobile toggle={burguer} isOpen={burguerToggle} />
+        
       </NavbarContent>
     </NavbarContainer>
   );
