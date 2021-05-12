@@ -34,6 +34,10 @@ const NavbarMobileLinks = styled.ul`
   li {
     list-style: none;
     margin-bottom: 20%;
+
+    :hover {
+      text-decoration: underline;
+    }
   }
 `;
 
