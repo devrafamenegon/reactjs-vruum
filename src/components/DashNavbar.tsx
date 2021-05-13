@@ -6,6 +6,8 @@ import { NavbarMobile } from './NavbarMobile';
 
 import { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarMobileButton, Burguer, NavLi } from '../styles/components/DashNavbar';
 
+import { handleIsActive } from '../utils/isActive';
+
 interface DashNavbarProps {
   color: string;
 }
@@ -31,22 +33,22 @@ export function DashNavbar(props: DashNavbarProps) {
 
         {/* nav-buttons */}
         <NavbarLinks>
-          <NavLi isActive={router.pathname == "/" ? true : false}>
+          <NavLi isActive={handleIsActive(router)}>
             <Link href="/">
               <a>HOME</a>
             </Link>
           </NavLi>
-          <NavLi isActive={router.pathname == "/dashboard/consumption" ? true : false}>
+          <NavLi isActive={handleIsActive(router)}>
             <Link href="/dashboard/consumption">
               <a>CONSUMO</a>
             </Link>
           </NavLi>
-          <NavLi isActive={router.pathname == "/dashboard/fuel" ? true : false}>
+          <NavLi isActive={handleIsActive(router)}>
             <Link href="/dashboard/fuel">
               <a>COMBUSTÍVEL</a>
             </Link>
           </NavLi>
-          <NavLi isActive={router.pathname == "/dashboard/course" ? true : false}>
+          <NavLi isActive={handleIsActive(router)}>
             <Link href="/dashboard/course">
               <a>PERCURSO</a>
             </Link>
