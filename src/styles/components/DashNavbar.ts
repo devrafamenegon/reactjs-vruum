@@ -1,8 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { FaBars } from 'react-icons/fa';
 
 interface NavbarContainerProps {
   backgroundColor: string;
+}
+
+interface NavLiProps {
+  isActive: boolean;
 }
 
 const NavbarContainer = styled.div<NavbarContainerProps>`
@@ -61,18 +65,6 @@ const NavbarLinks = styled.ul`
     width: 100%;
   }
 
-  li {
-    margin: 0 15px;
-
-    list-style: none;
-    transition: 0.5s;
-
-    &:hover {
-      transform: scale(1.1);
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    }
-  }
-
   a {
     color: var(--white);
 
@@ -84,6 +76,22 @@ const NavbarLinks = styled.ul`
   @media (max-width: 800px) {
     display: none;
   }
+`;
+
+const NavLi = styled.li<NavLiProps>`
+  margin: 0 15px;
+
+  list-style: none;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  }
+
+  ${({ isActive }) => isActive && css`
+    border-bottom: 1px solid var(--white);
+  `}
 `;
 
 const NavbarMobileButton = styled.button`
@@ -101,4 +109,4 @@ const Burguer = styled(FaBars)`
   color: var(--white);
 `;
 
-export { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarMobileButton, Burguer }
+export { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarMobileButton, Burguer, NavLi }

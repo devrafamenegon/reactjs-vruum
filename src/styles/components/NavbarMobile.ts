@@ -1,9 +1,14 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { FaTimes } from 'react-icons/fa';
 
 
 interface NavbarMobileContainerProps {
   isOpen: boolean;
+}
+
+interface NavLiProps {
+  isActive: boolean;
+  color: string;
 }
 
 const NavbarMobileContainer = styled.div<NavbarMobileContainerProps>`
@@ -30,15 +35,23 @@ const NavbarMobileContainer = styled.div<NavbarMobileContainerProps>`
 
 const NavbarMobileLinks = styled.ul`
   color: var(--white);
+`;
 
-  li {
-    list-style: none;
-    margin-bottom: 20%;
+const NavbarMobileLi = styled.li<NavLiProps>`
+  list-style: none;
+  margin-bottom: 20%;
 
-    :hover {
-      text-decoration: underline;
-    }
+  font-size: 26px;
+
+  transition: 0.5s all;
+
+  :hover {
+    color: ${(props: NavLiProps) => (props.color)};
   }
+
+  ${({ isActive }) => isActive && css`
+    text-decoration: underline;
+  `}
 `;
 
 const NavbarMobileClose = styled.div`
@@ -53,4 +66,4 @@ const CloseIcon = styled(FaTimes)`
   color: var(--white);
 `;
 
-export { NavbarMobileContainer, NavbarMobileLinks, NavbarMobileClose, CloseIcon }
+export { NavbarMobileContainer, NavbarMobileLinks, NavbarMobileLi, NavbarMobileClose, CloseIcon }

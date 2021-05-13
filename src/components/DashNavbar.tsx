@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { NavbarMobile } from './NavbarMobile';
 
-import { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarMobileButton, Burguer } from '../styles/components/DashNavbar';
+import { NavbarContainer, NavbarContent, NavbarLogo, NavbarLinks, NavbarMobileButton, Burguer, NavLi } from '../styles/components/DashNavbar';
 
 interface DashNavbarProps {
   color: string;
@@ -15,6 +16,8 @@ export function DashNavbar(props: DashNavbarProps) {
   function burguer() {
     setBurgerToggle(!burguerToggle);
   }
+
+  const router = useRouter();
 
   return (
     <NavbarContainer backgroundColor={props.color}>
@@ -28,26 +31,26 @@ export function DashNavbar(props: DashNavbarProps) {
 
         {/* nav-buttons */}
         <NavbarLinks>
-          <li>
+          <NavLi isActive={router.pathname == "/" ? true : false}>
             <Link href="/">
               <a>HOME</a>
             </Link>
-          </li>
-          <li>
+          </NavLi>
+          <NavLi isActive={router.pathname == "/dashboard/consumption" ? true : false}>
             <Link href="/dashboard/consumption">
               <a>CONSUMO</a>
             </Link>
-          </li>
-          <li>
+          </NavLi>
+          <NavLi isActive={router.pathname == "/dashboard/fuel" ? true : false}>
             <Link href="/dashboard/fuel">
               <a>COMBUSTÍVEL</a>
             </Link>
-          </li>
-          <li>
+          </NavLi>
+          <NavLi isActive={router.pathname == "/dashboard/course" ? true : false}>
             <Link href="/dashboard/course">
               <a>PERCURSO</a>
             </Link>
-          </li>
+          </NavLi>
         </NavbarLinks>
         
         <NavbarMobileButton>
