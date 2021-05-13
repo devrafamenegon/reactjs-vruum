@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from 'next/router';
 
 import { CloseIcon, NavbarMobileClose, NavbarMobileContainer, NavbarMobileLinks, NavbarMobileLi } from "../styles/components/NavbarMobile";
+import { handleIsActive } from "../utils/isActive";
 
 interface NavbarMobileProps {
   isOpen: boolean;
@@ -16,22 +17,22 @@ export function NavbarMobile(props: NavbarMobileProps) {
   return(
     <NavbarMobileContainer isOpen={props.isOpen}>
       <NavbarMobileLinks>
-        <NavbarMobileLi isActive={router.pathname == "/" ? true : false} color="#e7e7e7">
+        <NavbarMobileLi isActive={handleIsActive(router)} color="#e7e7e7">
           <Link href="/">
             <a>HOME</a>
           </Link>
         </NavbarMobileLi >
-        <NavbarMobileLi isActive={router.pathname == "/dashboard/consumption" ? true : false} color="var(--red)">
+        <NavbarMobileLi isActive={handleIsActive(router)} color="var(--red)">
           <Link href="/dashboard/consumption">
             <a>CONSUMO</a>
           </Link>
         </NavbarMobileLi>
-        <NavbarMobileLi isActive={router.pathname == "/dashboard/fuel" ? true : false} color="var(--green)">
+        <NavbarMobileLi isActive={handleIsActive(router)} color="var(--green)">
           <Link href="/dashboard/fuel">
             <a>COMBUSTÍVEL</a>
           </Link>
         </NavbarMobileLi>
-        <NavbarMobileLi isActive={router.pathname == "/dashboard/course" ? true : false} color="var(--blue)">
+        <NavbarMobileLi isActive={handleIsActive(router)} color="var(--blue)">
           <Link href="/dashboard/course">
             <a>PERCURSO</a>
           </Link>
