@@ -5,17 +5,20 @@ export function CardCourse() {
 
   
   const [result, setResult] = useState(null);
+  const [resultText, setResultText] = useState("Preencha os campos para realizar o cálculo");
   const [combPreco, setCombPreco] = useState (null)
   const [kmPerc, setKmPerc] = useState(null);
   const [autonomia, setAutonomia] = useState(null);
 
   function courseResult() {
-    setResult((Number(kmPerc) / Number(autonomia)) * Number(combPreco));
-    setResult(Number(result.toFixed(2)));
+    if(combPreco != null || kmPerc != null || autonomia != null) {
+      setResult((Number(kmPerc) / Number(autonomia)) * Number(combPreco));
+    }
   }
 
   function formClear() {
     setResult(null);
+    setResultText("Preencha os campos para realizar o cálculo");
     setCombPreco(null);
     setKmPerc(null);
     setAutonomia(null);
@@ -52,7 +55,7 @@ export function CardCourse() {
 
       </DashCardTop>
       <DashCardBottom>
-        <span>O gasto será de: R${result}</span>
+        <span>{result ? `O gasto será de: R\$${Number(result).toFixed(2)}` : "Preencha os campos para realizar o cálculo"}</span>
       </DashCardBottom>
     </DashCardContainer>
   );

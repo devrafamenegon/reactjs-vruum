@@ -17,9 +17,9 @@ export function CardFuel() {
 
   function formClear() {
     setResultFuel("Preencha os campos para realizar o cálculo");
-    setResult(0);
-    setEtanol(0);
-    setGasolina(0);
+    setResult(null);
+    setEtanol(null);
+    setGasolina(null);
   }
 
   return (

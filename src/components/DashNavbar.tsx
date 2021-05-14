@@ -33,22 +33,22 @@ export function DashNavbar(props: DashNavbarProps) {
 
         {/* nav-buttons */}
         <NavbarLinks>
-          <NavLi isActive={handleIsActive(router)}>
+          <NavLi isActive={(handleIsActive(router) === 0)}>
             <Link href="/">
               <a>HOME</a>
             </Link>
           </NavLi>
-          <NavLi isActive={handleIsActive(router)}>
+          <NavLi isActive={(handleIsActive(router) === 1)}>
             <Link href="/dashboard/consumption">
               <a>CONSUMO</a>
             </Link>
           </NavLi>
-          <NavLi isActive={handleIsActive(router)}>
+          <NavLi isActive={(handleIsActive(router) === 2)}>
             <Link href="/dashboard/fuel">
               <a>COMBUSTÍVEL</a>
             </Link>
           </NavLi>
-          <NavLi isActive={handleIsActive(router)}>
+          <NavLi isActive={(handleIsActive(router) === 3)}>
             <Link href="/dashboard/course">
               <a>PERCURSO</a>
             </Link>

@@ -8,13 +8,15 @@ export function CardConsumption() {
   const [kmPerc, setKmPerc] = useState(null);
 
   function consumptionResult() {
-    return setResult((Number(kmPerc) / Number(litros)).toFixed(2))
+    if(litros != null || kmPerc != null) {
+      return setResult((Number(kmPerc) / Number(litros)).toFixed(2))
+    }
   }
 
   function formClear() {
-    setResult(0);
-    setLitros(0);
-    setKmPerc(0);
+    setResult("Preencha os campos para realizar o cálculo");
+    setLitros(null);
+    setKmPerc(null);
   }
 
   return (
@@ -45,7 +47,7 @@ export function CardConsumption() {
 
       </DashCardTop>
       <DashCardBottom>
-        <span>Seu veículo tem uma autonomia de: {result} Km/L</span>
+        <span>{result ? `Seu veículo tem uma autonomia de: ${result} Km/L`  : "Preencha os campos para realizar o cálculo"}</span>
       </DashCardBottom>
     </DashCardContainer>
   );

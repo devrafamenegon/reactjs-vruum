@@ -71,6 +71,10 @@ const DashCardForm = styled.div`
     color: var(--white);
     background: var(--background);
   }
+
+  @media (max-width: 560px) {
+    padding: 30px 0px 30px 0px;
+  }
 `;
 
 const DashCardFormButtons = styled.div<DashCardFormButtonsProps>`
@@ -116,10 +120,13 @@ const DashCardBottom = styled.div`
   width: 90%;
 
   margin: 0 auto;
+  margin-bottom: 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  text-align: center;
 
   background: var(--background);
 

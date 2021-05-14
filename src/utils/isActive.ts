@@ -1,18 +1,21 @@
-export const handleIsActive = (router): boolean => {
+export const handleIsActive = (router): number => {
+
   switch (router.pathname) {
     case "/":
-      return true;
+      return 0;
 
     case "/dashboard/consumption":
-      return true;
+      return 1;
 
     case "/dashboard/fuel":
-      return true;
+      return 2;
 
     case "/dashboard/course":
-      return true;
+      return 3;
 
     default:
-      return false;
+      return 4;
   }
 };
+
+

@@ -17,22 +17,22 @@ export function NavbarMobile(props: NavbarMobileProps) {
   return(
     <NavbarMobileContainer isOpen={props.isOpen}>
       <NavbarMobileLinks>
-        <NavbarMobileLi isActive={handleIsActive(router)} color="#e7e7e7">
+        <NavbarMobileLi isActive={(handleIsActive(router) === 0)} color="#e7e7e7">
           <Link href="/">
             <a>HOME</a>
           </Link>
         </NavbarMobileLi >
-        <NavbarMobileLi isActive={handleIsActive(router)} color="var(--red)">
+        <NavbarMobileLi isActive={(handleIsActive(router) === 1)} color="var(--red)">
           <Link href="/dashboard/consumption">
             <a>CONSUMO</a>
           </Link>
         </NavbarMobileLi>
-        <NavbarMobileLi isActive={handleIsActive(router)} color="var(--green)">
+        <NavbarMobileLi isActive={(handleIsActive(router) === 2)} color="var(--green)">
           <Link href="/dashboard/fuel">
             <a>COMBUSTÍVEL</a>
           </Link>
         </NavbarMobileLi>
-        <NavbarMobileLi isActive={handleIsActive(router)} color="var(--blue)">
+        <NavbarMobileLi isActive={(handleIsActive(router) === 3)} color="var(--blue)">
           <Link href="/dashboard/course">
             <a>PERCURSO</a>
           </Link>
