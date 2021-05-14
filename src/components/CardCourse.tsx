@@ -55,7 +55,7 @@ export function CardCourse() {
 
       </DashCardTop>
       <DashCardBottom>
-        <span>{result ? `O gasto será de: R\$${Number(result).toFixed(2)}` : "Preencha os campos para realizar o cálculo"}</span>
+        <span>{result ? `O gasto será de: R\$${Number(result).toFixed(2)}` : resultText}</span>
       </DashCardBottom>
     </DashCardContainer>
   );

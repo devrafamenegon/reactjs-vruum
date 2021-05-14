@@ -40,7 +40,7 @@ export function NavbarMobile(props: NavbarMobileProps) {
       </NavbarMobileLinks>
       
       <NavbarMobileClose onClick={props.toggle}>
-        <CloseIcon size="25" color="var(--white)" />
+        <CloseIcon size="30" color="var(--white)" />
       </NavbarMobileClose>
 
     </NavbarMobileContainer>

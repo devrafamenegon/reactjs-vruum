@@ -4,6 +4,7 @@ import { DashCardContainer, DashCardTop, DashCardImage, DashCardForm, DashCardFo
 export function CardConsumption() {
 
   const [result, setResult] = useState(null);
+  const [resultText, setResultText] = useState("Preencha os campos para realizar o cálculo");
   const [litros, setLitros] = useState(null);
   const [kmPerc, setKmPerc] = useState(null);
 
@@ -14,7 +15,8 @@ export function CardConsumption() {
   }
 
   function formClear() {
-    setResult("Preencha os campos para realizar o cálculo");
+    setResult(null);
+    setResultText("Preencha os campos para realizar o cálculo")
     setLitros(null);
     setKmPerc(null);
   }
@@ -47,7 +49,7 @@ export function CardConsumption() {
 
       </DashCardTop>
       <DashCardBottom>
-        <span>{result ? `Seu veículo tem uma autonomia de: ${result} Km/L`  : "Preencha os campos para realizar o cálculo"}</span>
+        <span>{result ? `Seu veículo tem uma autonomia de: ${result}Km/L`  : resultText}</span>
       </DashCardBottom>
     </DashCardContainer>
   );

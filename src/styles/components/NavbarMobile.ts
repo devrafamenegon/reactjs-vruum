@@ -56,8 +56,8 @@ const NavbarMobileLi = styled.li<NavLiProps>`
 
 const NavbarMobileClose = styled.div`
   position: absolute;
-  top: 5%;
-  right: 10%;
+  top: 3%;
+  right: 9%;
 
   cursor: pointer;
 `;
